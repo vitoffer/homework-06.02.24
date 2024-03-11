@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
+</head>
+
+<body>
+    <form action="/api/registration" method="POST">
+        <input type="text" placeholder="Фамилия" name="last_name">
+        <input type="text" placeholder="Имя" name="first_name">
+        <input type="text" placeholder="Отчество" name="middle_name">
+        <input type="tel" placeholder="Телефон" name="phone">
+        <input type="email" placeholder="Эл. почта" name="email">
+        <label>Дата заезда: <input type="date" name="check_in_date"></label>
+        <label>Дата выезда: <input type="date" name="departure_date"></label>
+        <input type="submit" value="Забронировать">
+    </form>
+</body>
+
+</html>
